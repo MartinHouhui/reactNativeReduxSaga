@@ -18,7 +18,7 @@ export default class SecondPageComponent extends React.Component {
     _pressButton() {
         const { navigator } = this.props;
         if (navigator) {
-            navigator.jumpBack();
+            navigator.jumpForward()
         }
     }
 

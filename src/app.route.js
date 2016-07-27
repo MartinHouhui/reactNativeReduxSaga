@@ -1,6 +1,7 @@
 import React from 'react';
 import FirstPageComponent from './pages/FirstPageComponent';
 import SecondPageComponent from './pages/SecondPageComponent';
+import ThirdPageComponent from './pages/ThirdPageConpomet';
 
 const routeStack = [
     {
@@ -8,6 +9,9 @@ const routeStack = [
     },
     {
         name: 'SecondPageComponent', component: SecondPageComponent
+    },
+    {
+        name: 'ThirdPageComponent', component: ThirdPageComponent
     }
 ];
 
