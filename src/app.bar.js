@@ -3,7 +3,8 @@ import {
     View,
     Navigator,
     TouchableOpacity,
-    Text
+    Text,
+    SegmentedControlIOS
 } from 'react-native';
 
 const NavigationBarRouteMapper = {
@@ -25,11 +26,9 @@ const NavigationBarRouteMapper = {
     },
     Title(route, navigator, index, navState) {
         return (
-            <TouchableOpacity style={{ flex: 1, justifyContent: 'center' }}>
-                <Text style={{ color: 'white', margin: 5, fontSize: 16 }}>
-                    主页
-                </Text>
-            </TouchableOpacity>
+            <View style={{ flex: 2, justifyContent: 'center',width:100 }}>
+               <SegmentedControlIOS tintColor="#ff0000" values={['One', 'Two']} />
+            </View>
         );
     }
 }

@@ -1,7 +1,6 @@
 'use strict'
 import React, { Component } from 'react'
 import { View, StyleSheet, ListView, TouchableHighlight, RefreshControl, Image, Text } from 'react-native'
-import AboutPage from './AboutPage'
 import Animation from './Animation'
 import SnackBar from './SnackBar.js'
 
