@@ -6,14 +6,15 @@ import listPage from './pages/listPage';
 
 const routeStack = [
     {
+        name: 'ThirdPageComponent', component: listPage
+    },
+    {
         name: 'FirstPageComponent', component: FirstPageComponent
     },
     {
         name: 'SecondPageComponent', component: SecondPageComponent
-    },
-    {
-        name: 'ThirdPageComponent', component: listPage
     }
+    
 ];
 
 export default routeStack;
