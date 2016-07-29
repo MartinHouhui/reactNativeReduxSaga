@@ -13,8 +13,6 @@ import * as reducers from './reducers';
 
 import RouteStack from './app.route';
 
-import RouteBarMapping from './app.bar';
-
 import createSagaMiddleware from 'redux-saga';
 
 import SagaManager from './sagas/SagaManager';
@@ -43,10 +41,6 @@ export default class SampleComponent extends React.Component {
                         let Component = route.component;
                         return <Component {...route.params} navigator={navigator} />
                     } }
-                    navigationBar={
-                        <Navigator.NavigationBar style={{ backgroundColor: '#246dd5' }}
-                            routeMapper={RouteBarMapping} />
-                    }
                     />
             </Provider>
         );

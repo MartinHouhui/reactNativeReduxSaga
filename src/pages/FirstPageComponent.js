@@ -1,4 +1,6 @@
 import React from 'react';
+import { Container, Header, Title, Content } from 'native-base';
+
 import {
     View,
     Navigator,
@@ -23,22 +25,33 @@ class FirstPageComponent extends React.Component {
     }
     render() {
         return (
-            <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-                <TouchableOpacity onPress={this._pressButton.bind(this) }>
-                    <Text>点我跳转</Text>
-                </TouchableOpacity>
-                <TouchableOpacity onPress={()=>{
-                    this.props.dispatch({type:'increant'})
-                } }>
-                    <Text>{this.props.state.counter}</Text>
-                </TouchableOpacity>
-            </View>
+
+            <Container>
+                <Header>
+
+                    <Title>First</Title>
+
+                </Header>
+                <Content >
+                    <View style={{ flex: 1, alignItems: 'center' }}>
+                        <TouchableOpacity onPress={this._pressButton.bind(this) }>
+                            <Text>点我跳转</Text>
+                        </TouchableOpacity>
+                        <TouchableOpacity onPress={() => {
+                            this.props.dispatch({ type: 'increant' })
+                        } }>
+                            <Text>{this.props.state.counter}</Text>
+                        </TouchableOpacity>
+                    </View>
+                </Content>
+            </Container>
         );
     }
 }
 
 export default connect(state => {
     return {
-    state: state.test
-}}
+        state: state.test
+    }
+}
 )(FirstPageComponent);
